@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# myport-1
-mi portfolio personal 1
+# Portfolio personal
 =======
 # React + TypeScript + Vite
 
