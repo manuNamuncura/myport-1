@@ -28,10 +28,10 @@ const Skills = () => {
     <section id="skills" className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12 animate-in fade-in slide-in-from-bottom duration-700">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-primary to-accent bg-clip-text">
             Habilidades
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-linear-to-r from-primary to-accent mx-auto rounded-full"></div>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
             Tecnologías y herramientas con las que trabajo para crear soluciones
             de calidad

@@ -32,13 +32,13 @@ const Proyects = () => {
 
 
     return (
-        <section id="proyects" className="py-20 px-4 bg-gradient-to-b from-secondary/30 to-background">
+        <section id="proyects" className="py-20 px-4 bg-linear-to-b from-secondary/30 to-background">
             <div className="container mx-auto max-w-6xl">
                 <div className="text-center mb-12 animate-in fade-in slide-in-from-bottom duration-700">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-primary to-accent bg-clip-text">
                         Proyectos
                     </h2>
-                    <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+                    <div className="w-20 h-1 bg-linear-to-r from-primary to-accent mx-auto rounded-full"></div>
                     <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
                         Algunos de los proyectos en los que he trabajado
                     </p>

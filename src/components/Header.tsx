@@ -39,7 +39,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text">
+          <h1 className="text-2xl font-bold bg-linear-to-r from-primary to-accent bg-clip-text">
             Manuel Namuncurá
           </h1>
 

@@ -40,7 +40,7 @@ const Experience = () => {
           className="relative pl-8 animate-in fade-in slide-in-from-left"
           style={{ animationDelay: `${index * 100}ms` }}
         >
-          <div className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-primary to-accent"></div>
+          <div className="absolute left-0 top-0 h-full w-px bg-linear-to-b from-primary to-accent"></div>
           <div className="absolute left-0 top-1 w-2 h-2 rounded-full bg-accent -translate-x-[3.5px] animate-pulse"></div>
 
           <Card className="p-6 hover:shadow-lg transition-all duration-300 border-2 hover:border-accent/50">
@@ -73,10 +73,10 @@ const Experience = () => {
     <section id="experience" className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12 animate-in slide-in-from-bottom duration-700">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-cli-text">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-primary to-accent bg-cli-text">
             Experiencia y Educación
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-linear-to-r from-primary to-accent mx-auto rounded-full"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
