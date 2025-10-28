@@ -1,6 +1,19 @@
 import { Linkedin, Mail, Phone, Github } from "lucide-react";
 
 const Footer = () => {
+  const scrollToSection = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth'})
+  }
+  
+  const sections = [
+    "hero", 
+    "about", 
+    "skills", 
+    "projects", 
+    "experience", 
+    "contact"
+  ];
+
   return (
     <footer className="bg-primary text-primary-foreground py-12 px-4">
       <div className="container mx-auto max-w-6xl">
@@ -13,27 +26,18 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Navegación</h4>
-            <ul className="space-y-2">
-              {["Inicio", "Sobre mí", "Habilidades", "Proyectos", "Experiencia", "Contacto"].map(
-                (item) => (
-                  <li key={item}>
-                    <button
-                      onClick={() => {
-                        const id = item.toLowerCase().replace(" ", "");
-                        const element = document.getElementById(
-                          id === "inicio" ? "hero" : id === "sobremí" ? "about" : id
-                        );
-                        element?.scrollIntoView({ behavior: "smooth" });
-                      }}
-                      className="text-primary-foreground/10 hover:text-accent transition-colors"
-                    >
-                      {item}
-                    </button>
-                  </li>
-                )
-              )}
-            </ul>
+            <h4 className="font-semibold text-lg mb-4">Navegación</h4>
+            <div className="space-y-2">
+             {sections.map((section) => (
+              <button
+                key={section}
+                onClick={() => scrollToSection(section)}
+                className="block text-gray-400 hover:text-white transition"
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </button>
+             ))}
+            </div>
           </div>
 
           <div>

@@ -1,8 +1,37 @@
 import { Button } from "./ui/button";
 import { Download, Mail } from "lucide-react";
 import heroImage from "@/assets/manuport1.jpg"
+import { useEffect, useState } from "react";
+import { motion } from 'framer-motion'
 
 const Hero = () => {
+
+  const [currentText, setCurrentText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const texts = [
+    "NestJs",
+    "Angular",
+    "React",
+    "Spring Boot"
+  ]
+
+  useEffect(() => {
+    const text = texts[currentIndex]
+    let index = 0
+    const timer = setInterval(() => {
+      setCurrentText(text.slice(0, index))
+      index ++
+      if (index > text.length) {
+        setTimeout(() => {
+          setCurrentIndex((prev) => (prev + 1) % texts.length)
+        }, 2000)
+        clearInterval(timer)
+      }
+    }, 100)
+    return () => clearInterval(timer)
+  }, [currentIndex])
+
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
@@ -27,9 +56,25 @@ const Hero = () => {
             <h2 className="text-2xl md:text-3xl text-foreground/80 font-medium">
               Desarrollador
             </h2>
-            <p className="text-lg text-muted-foreground">
-              NestJS • Angular • SpringBoot • React
-            </p>
+
+            <div className="h-16 mb-1">
+              <motion.p
+                className="text-2xl lg:text-3xl text-gray-600 font-light"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+              >
+                {currentText}
+                <motion.span
+                  animate={{ opacity: [1, 0] }}
+                  transition={{ duration: 0.8, repeat: Infinity}}
+                  className="text-blue-600"
+                >
+
+                </motion.span>
+              </motion.p>
+            </div>
+
             <p className="text-muted-foreground max-w-lg">
               Estudiante de Ingeniería en Sistemas de Información, apasionado por crear
               soluciones tecnológicas innovadoras y escalables.
