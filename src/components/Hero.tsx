@@ -41,7 +41,7 @@ const Hero = () => {
 
   return (
     <section
-      id="hero"
+      id="inicio"
       className="min-h-screen flex items-center justify-center pt-20 px-4 bg-linear-to-b from-background to-secondary/30"
     >
       <div className="container mx-auto">

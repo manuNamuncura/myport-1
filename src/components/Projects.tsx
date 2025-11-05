@@ -32,7 +32,7 @@ const Proyects = () => {
 
 
     return (
-        <section id="proyects" className="py-20 px-4 bg-linear-to-b from-secondary/30 to-background">
+        <section id="proyectos" className="py-20 px-4 bg-linear-to-b from-secondary/30 to-background">
             <div className="container mx-auto max-w-6xl">
                 <div className="text-center mb-12 animate-in fade-in slide-in-from-bottom duration-700">
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-primary to-accent bg-clip-text">

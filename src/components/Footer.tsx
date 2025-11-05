@@ -6,12 +6,12 @@ const Footer = () => {
   }
   
   const sections = [
-    "hero", 
-    "about", 
-    "skills", 
-    "projects", 
-    "experience", 
-    "contact"
+    "inicio", 
+    "sobre mi", 
+    "habilidades", 
+    "proyectos", 
+    "experiencias", 
+    "contacto"
   ];
 
   return (

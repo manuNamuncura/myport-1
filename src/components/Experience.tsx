@@ -70,7 +70,7 @@ const Experience = () => {
   );
 
   return (
-    <section id="experience" className="py-20 px-4 bg-background">
+    <section id="experiencias" className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12 animate-in slide-in-from-bottom duration-700">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-primary to-accent bg-cli-text">

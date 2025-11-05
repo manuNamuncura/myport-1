@@ -23,12 +23,12 @@ const Header = () => {
   };
 
   const navItems = [
-    { label: "Inicio", id: "hero" },
-    { label: "Sobre mí", id: "about" },
-    { label: "Habilidades", id: "skills" },
-    { label: "Proyectos", id: "proyects" },
-    { label: "Experiencia", id: "experience" },
-    { label: "Contacto", id: "contact" },
+    { label: "Inicio", id: "inicio" },
+    { label: "Sobre mí", id: "sobre mi" },
+    { label: "Habilidades", id: "habilidades" },
+    { label: "Proyectos", id: "proyectos" },
+    { label: "Experiencia", id: "experiencias" },
+    { label: "Contacto", id: "contacto" },
   ];
 
   return (
