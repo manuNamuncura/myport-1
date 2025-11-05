@@ -7,7 +7,7 @@ const Footer = () => {
   
   const sections = [
     "inicio", 
-    "sobre mi", 
+    "sobre-mi", 
     "habilidades", 
     "proyectos", 
     "experiencias", 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,7 +25,7 @@ const Header = () => {
 
   const navItems = [
     { label: "Inicio", id: "inicio" },
-    { label: "Sobre mí", id: "sobre mi" },
+    { label: "Sobre mí", id: "sobre-mi" },
     { label: "Habilidades", id: "habilidades" },
     { label: "Proyectos", id: "proyectos" },
     { label: "Experiencia", id: "experiencias" },
@@ -49,7 +50,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground/80 hover-accet transition-colors duration-300 font-medium"
+                className="text-foreground/80 hover:text-accet transition-colors duration-300 font-medium"
               >
                 {item.label}
               </button>
@@ -69,17 +70,22 @@ const Header = () => {
 
         {/* menu movil desplegable */}
         {isMobileMenuOpen && (
-            <nav className="md:hidden mt-4 pb-4 flex flex-col gap-4 animate-in slide-in-from-top">
-                {navItems.map((item) => (
-                    <button
-                        key={item.id}
-                        onClick={() => scrollToSection(item.id)}
-                        className="text-foreground/80 hover:text-accent transition-colors duration-300 font-medium text-left"
-                    >
-                        {item.label}
-                    </button>
-                ))}
-            </nav>
+          <motion.nav
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="md:hidden mt-4 pb-4 flex flex-col gap-4 animate-in slide-in-from-top"
+          >
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="text-foreground/80 hover:text-accent transition-colors duration-300 font-medium text-left"
+              >
+                {item.label}
+              </button>
+            ))}
+          </motion.nav>
         )}
       </div>
     </header>
