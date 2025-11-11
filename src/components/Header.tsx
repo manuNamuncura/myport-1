@@ -61,7 +61,7 @@ const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden gap-2 bg-transparent"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
@@ -80,7 +80,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground/80 hover:text-accent transition-colors duration-300 font-medium text-left"
+                className="text-foreground/80 hover:text-accent transition-colors cursor-pointer duration-300 font-medium text-left"
               >
                 {item.label}
               </button>
