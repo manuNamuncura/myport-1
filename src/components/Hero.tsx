@@ -93,10 +93,10 @@ const Hero = () => {
               Estudiante de Ingeniería en Sistemas de Información, apasionado
               por crear soluciones tecnológicas innovadoras y escalables.
             </p>
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className="flex flex-wrap gap-4 pt-4 w-full">
               <Button
                 size="lg"
-                className="bg-linear-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                className="w-40 bg-linear-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <Download className="mr-2 h-5 w-5" />
                 Descargar CV
@@ -105,7 +105,7 @@ const Hero = () => {
                 size="lg"
                 variant="outline"
                 onClick={scrollToContact}
-                className="bg-linear-to-r from-blue-600 to-indigo-600 hover:from-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                className="w-40 bg-linear-to-r from-blue-600 to-indigo-600 hover:from-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Contactame

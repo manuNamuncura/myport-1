@@ -21,7 +21,7 @@ const About = () => {
   ];
 
   return (
-    <section id="sobre-mi" className="py-20 px-4 bg-linear-to-b from-background to-secondary/30">
+    <section id="sobre mi" className="py-20 px-4 bg-linear-to-b from-background to-secondary/30">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12 animate-in fade-in slide-in-from-bottom duration-700">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-primary to-accent bg-clip-text">

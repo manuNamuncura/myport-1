@@ -7,7 +7,7 @@ const Footer = () => {
 
   const sections = [
     "inicio",
-    "sobre-mi",
+    "sobre mi",
     "habilidades",
     "proyectos",
     "experiencias",
@@ -15,7 +15,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="py-12 bg-gray-900 text-white">
+    <div className="py-12 bg-gray-900 text-white -mx-4 -m-4">
       <footer className="py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">

@@ -98,7 +98,7 @@ const Contact = () => {
             <Button
               type="submit"
               size="lg"
-              className="bg-linear-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+              className="w-40 bg-linear-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Send className="mr-2 h-5 w-5" />
               Enviar Mensaje
