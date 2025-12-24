@@ -134,7 +134,6 @@ const Hero = () => {
           </div>
         </div>
         <div className="relative overflow-hidden h-[200px] flex justify-center items-center">
-          {/* Basic horizontal loop */}
           <LogoLoop
             logos={techLogos}
             speed={120}
@@ -145,6 +144,7 @@ const Hero = () => {
             scaleOnHover
             fadeOut
             fadeOutColor="#ffffff"
+            forceMotion
             ariaLabel="Technology partners"
           />
         </div>

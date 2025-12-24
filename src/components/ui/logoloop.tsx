@@ -29,6 +29,7 @@ export interface LogoLoopProps {
   hoverSpeed?: number;
   fadeOut?: boolean;
   fadeOutColor?: string;
+  forceMotion?: boolean;
   scaleOnHover?: boolean;
   renderItem?: (item: LogoItem, key: React.Key) => React.ReactNode;
   ariaLabel?: string;
@@ -122,7 +123,8 @@ const useAnimationLoop = (
   seqHeight: number,
   isHovered: boolean,
   hoverSpeed: number | undefined,
-  isVertical: boolean
+  isVertical: boolean,
+  forceMotion?: boolean
 ) => {
   const rafRef = useRef<number | null>(null);
   const lastTimestampRef = useRef<number | null>(null);
@@ -148,7 +150,7 @@ const useAnimationLoop = (
       track.style.transform = transformValue;
     }
 
-    if (prefersReduced) {
+    if (prefersReduced && !forceMotion) {
       track.style.transform = isVertical ? 'translate3d(0, 0, 0)' : 'translate3d(0, 0, 0)';
       return () => {
         lastTimestampRef.current = null;
@@ -210,7 +212,8 @@ export const LogoLoop = React.memo<LogoLoopProps>(
     renderItem,
     ariaLabel = 'Partner logos',
     className,
-    style
+    style,
+    forceMotion
   }) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const trackRef = useRef<HTMLDivElement>(null);
@@ -271,7 +274,7 @@ export const LogoLoop = React.memo<LogoLoopProps>(
 
     useImageLoader(seqRef, updateDimensions, [logos, gap, logoHeight, isVertical]);
 
-    useAnimationLoop(trackRef, targetVelocity, seqWidth, seqHeight, isHovered, effectiveHoverSpeed, isVertical);
+    useAnimationLoop(trackRef, targetVelocity, seqWidth, seqHeight, isHovered, effectiveHoverSpeed, isVertical, forceMotion);
 
     const cssVariables = useMemo(
       () =>
