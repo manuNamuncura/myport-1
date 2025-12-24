@@ -49,7 +49,7 @@ const Hero = () => {
   }, [currentIndex]);
 
   const scrollToContact = () => {
-    const element = document.getElementById("contact");
+    const element = document.getElementById("contacto");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -98,8 +98,15 @@ const Hero = () => {
                 size="lg"
                 className="w-40 bg-linear-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <Download className="mr-2 h-5 w-5" />
-                Descargar CV
+                <a
+                  href="/public/cv.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <Download className="mr-2 h-5 w-5" />
+                  Descargar CV
+                </a>
               </Button>
               <Button
                 size="lg"
