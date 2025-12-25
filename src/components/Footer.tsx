@@ -14,6 +14,34 @@ const Footer = () => {
     "contacto",
   ];
 
+  const socialLinks = [
+    {
+      icon: Mail,
+      href: "malito:manu.namun94@gmail.com",
+      label: "Email",
+    },
+    {
+      icon: Phone,
+      href: "tel:+5492975369478",
+      lable: "Telefono",
+    },
+    {
+      icon: Github,
+      href: "https://github.com/manuNamuncura",
+      label: "GitHub",
+    },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/manuel-namuncur%C3%A1-a9591b21b/",
+      label: "LinkedIn",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/nmanu94",
+      label: "Instagram",
+    },
+  ];
+
   return (
     <div className="py-12 bg-gray-900 text-white -mx-4 -m-4">
       <footer className="py-12">
@@ -47,18 +75,19 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">Contacto</h4>
               <div className="flex space-x-4">
-                {[Mail, Phone, Github, Linkedin, Instagram].map(
-                  (Icon, index) => (
-                    <motion.a
-                      key={index}
-                      href="#"
-                      whileHover={{ scale: 1.1 }}
-                      className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
-                    >
-                      <Icon className="w-5 h-5" />
-                    </motion.a>
-                  )
-                )}
+                {socialLinks.map(({ icon: Icon, href, label }) => (
+                  <motion.a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    whileHover={{ scale: 1.1 }}
+                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+                  >
+                    <Icon className="w-5 h-5" />
+                  </motion.a>
+                ))}
               </div>
             </div>
           </div>

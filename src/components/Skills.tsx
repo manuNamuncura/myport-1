@@ -15,12 +15,12 @@ const Skills = () => {
     },
     {
       category: "Base de datos",
-      skills: ["MySQL", "PostgreSQL"],
+      skills: ["MySQL", "PostgreSQL", "MongoDB"],
       color: "bg-primary/10 text-primary border-primary/20",
     },
     {
       category: "Herramientas",
-      skills: ["GitHub", "VS Code", "Postman", "Swagger"],
+      skills: ["GitHub", "VS Code", "Postman", "Swagger", "Prisma"],
       color: "bg-accent/10 text-accent border-accent/20",
     },
   ];

@@ -9,6 +9,10 @@ import {
   SiNextdotjs,
   SiTypescript,
   SiTailwindcss,
+  SiNestjs,
+  SiAngular,
+  SiPrisma,
+  SiMysql
 } from "react-icons/si";
 
 const techLogos = [
@@ -24,6 +28,26 @@ const techLogos = [
     title: "Tailwind CSS",
     href: "https://tailwindcss.com",
   },
+  {
+    node: <SiNestjs />,
+    title: "NestJs",
+    href: "https://nestjs.com",
+  },
+  {
+    node: <SiAngular />,
+    title: "Angular",
+    href: "https://angular.io", 
+  },
+  {
+    node: <SiPrisma />,
+    title: "Prisma",
+    href: "https://www.prisma.io",
+  },
+  {
+    node: <SiMysql />,
+    title: "MySQL",
+    href: "https://www.mysql.com",
+  }
 ];
 
 const Hero = () => {
