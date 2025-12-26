@@ -101,9 +101,9 @@ const Header = () => {
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
+              className="md:hidden mt-4 pb-4 flex flex-col gap-4 animate-in slide-in-from-top"
             >
               {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-              Cambiar tema
             </Button>
           </motion.nav>
         )}

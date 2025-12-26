@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import LogoLoop from "./ui/logoloop";
 import {
   SiReact,
-  SiNextdotjs,
   SiTypescript,
   SiTailwindcss,
   SiNestjs,
@@ -17,7 +16,6 @@ import {
 
 const techLogos = [
   { node: <SiReact />, title: "React", href: "https://react.dev" },
-  { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
   {
     node: <SiTypescript />,
     title: "TypeScript",

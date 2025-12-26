@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap');
 @import "tailwindcss";
 
 @layer base {
@@ -70,7 +71,7 @@
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
-    font-family: 'Inter', sans-serif;
+    font-family: 'Alan Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   }
 }
 

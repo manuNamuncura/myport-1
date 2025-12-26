@@ -8,6 +8,14 @@ const config: Config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
+
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Alan Sans', 'system-ui', 'sans-serif'],
+      },
+    },
+  },
   
 };
 
