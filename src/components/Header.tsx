@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
+import { useTheme } from "../hooks/use-theme";
 import { Button } from "./ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,6 +57,15 @@ const Header = () => {
                 {item.label}
               </button>
             ))}
+
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+              aria-label="Cambiar tema"
+            >
+              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+            </Button>
           </nav>
 
           {/* menu movil */}
@@ -85,6 +96,15 @@ const Header = () => {
                 {item.label}
               </button>
             ))}
+
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+            >
+              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+              Cambiar tema
+            </Button>
           </motion.nav>
         )}
       </div>
