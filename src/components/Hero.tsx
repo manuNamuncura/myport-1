@@ -11,11 +11,14 @@ import {
   SiNestjs,
   SiAngular,
   SiPrisma,
-  SiMysql
+  SiMysql,
 } from "react-icons/si";
 
 const techLogos = [
-  { node: <SiReact />, title: "React", href: "https://react.dev" },
+  { 
+    node: <SiReact />, 
+    title: "React", 
+    href: "https://react.dev" },
   {
     node: <SiTypescript />,
     title: "TypeScript",
@@ -34,7 +37,7 @@ const techLogos = [
   {
     node: <SiAngular />,
     title: "Angular",
-    href: "https://angular.io", 
+    href: "https://angular.io",
   },
   {
     node: <SiPrisma />,
@@ -45,7 +48,7 @@ const techLogos = [
     node: <SiMysql />,
     title: "MySQL",
     href: "https://www.mysql.com",
-  }
+  },
 ];
 
 const Hero = () => {

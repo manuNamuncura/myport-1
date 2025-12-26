@@ -1,4 +1,4 @@
-import { Linkedin, Mail, Phone, Github, Instagram } from "lucide-react";
+import { Linkedin, Mail, Github, Instagram, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -21,7 +21,7 @@ const Footer = () => {
       label: "Email",
     },
     {
-      icon: Phone,
+      icon: MessageCircle,
       href: "tel:+5492975369478",
       lable: "Telefono",
     },
