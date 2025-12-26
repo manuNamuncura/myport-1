@@ -1,253 +1,351 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <title>CV | Manuel Namuncurá</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>CV | Manuel Namuncurá</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- SEO específico del CV -->
-  <meta name="description" content="CV de Manuel Namuncurá, Analista en Sistemas y Desarrollador Trainee / Junior." />
-  <meta name="author" content="Manuel Namuncurá" />
-  <meta name="robots" content="noindex, follow" />
+    <meta
+      name="description"
+      content="CV de Manuel Namuncurá, Analista en Sistemas y Desarrollador Trainee / Junior."
+    />
+    <meta name="author" content="Manuel Namuncurá" />
+    <meta name="robots" content="noindex, follow" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="CV | Manuel Namuncurá" />
-  <meta property="og:description" content="Analista en Sistemas | Desarrollador Trainee / Junior" />
-  <meta property="og:type" content="profile" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fuente -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
-  <!-- html2pdf -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+      :root {
+        --primary: #1e40af;
+        --text: #111827;
+        --muted: #4b5563;
+        --bg: #f3f4f6;
+        --accent: #eff6ff;
+      }
 
-  <style>
-    :root {
-      --primary: #2563eb;
-      --text: #111827;
-      --muted: #6b7280;
-      --bg: #f3f4f6;
-    }
+      * {
+        box-sizing: border-box;
+      }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      padding: 40px 0;
-    }
-
-    .container {
-      max-width: 820px;
-      margin: auto;
-      padding: 0 20px;
-    }
-
-    .actions {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 16px;
-    }
-
-    button {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 10px 16px;
-      border-radius: 6px;
-      font-weight: 500;
-      cursor: pointer;
-    }
-
-    button:hover {
-      opacity: 0.9;
-    }
-
-    #cv {
-      background: white;
-      padding: 36px;
-      border-radius: 8px;
-      box-shadow: 0 20px 40px rgba(0,0,0,.08);
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 4px;
-    }
-
-    h2 {
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    h3 {
-      margin-top: 28px;
-      margin-bottom: 8px;
-      font-size: 1.1rem;
-      color: var(--primary);
-    }
-
-    p {
-      margin: 0 0 8px;
-    }
-
-    ul {
-      margin: 6px 0 0 18px;
-    }
-
-    .info {
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #eef2ff;
-      color: #1e3a8a;
-      padding: 4px 8px;
-      border-radius: 4px;
-      font-size: 0.85rem;
-      margin: 4px 4px 0 0;
-    }
-
-    @media print {
       body {
+        margin: 0;
+        font-family: "Alan Sans", system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.5;
+        padding: 40px 0;
+      }
+
+      .container {
+        max-width: 850px;
+        margin: auto;
+        padding: 0 20px;
+      }
+
+      .actions {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 16px;
+      }
+
+      button {
+        background: var(--primary);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      button:hover {
+        background: #1e3a8a;
+      }
+
+      #cv {
         background: white;
+        padding: 45px;
+        border-radius: 4px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      }
+
+      header {
+        border-bottom: 1px solid var(--primary);
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        margin: 0;
+        color: var(--text);
+      }
+
+      h2 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: var(--primary);
+        margin: 5px 0 15px 0;
+      }
+
+      h3 {
+        margin-top: 25px;
+        margin-bottom: 12px;
+        font-size: 1rem;
+        color: var(--primary);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 1px solid var(--accent);
+        padding-bottom: 4px;
+      }
+
+      p {
+        margin: 0 0 8px;
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      ul {
+        margin: 6px 0 0 18px;
         padding: 0;
       }
-      .actions {
-        display: none;
+
+      li {
+        margin-bottom: 4px;
       }
-      #cv {
-        box-shadow: none;
-        border-radius: 0;
+
+      .info {
+        font-size: 0.9rem;
+        color: var(--muted);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <div class="container">
-    <div class="actions">
-      <button onclick="downloadPDF()">Descargar PDF</button>
-    </div>
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+      }
 
-    <section id="cv">
-      <h1>Manuel Namuncurá</h1>
-      <h2>Analista en Sistemas | Desarrollador Trainee / Junior</h2>
+      .tag {
+        display: inline-block;
+        background: var(--accent);
+        color: var(--primary);
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin: 2px 2px 0 0;
+        border: 1px solid #dbeafe;
+      }
 
-      <p class="info">
-        Villa María, Córdoba ·
-        <strong>Email:</strong> manu.namun94@gmail.com ·
-        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/manuel-namuncurá-a9591b21b">linkedin.com/in/manuel-namuncurá-a9591b21b</a>
-      </p>
+      .project-card {
+        margin-bottom: 15px;
+      }
 
-      <h3>Perfil Profesional</h3>
-      <p>
-        Analista en Sistemas y estudiante avanzado de Ingeniería en Sistemas de Información,
-        con orientación al desarrollo de software. Interés en formar parte de equipos de
-        desarrollo donde pueda seguir creciendo profesionalmente y aportar soluciones técnicas.
-      </p>
+      .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
 
-      <h3>Habilidades Técnicas</h3>
-      <div class="grid">
-        <div>
-          <strong>Lenguajes</strong><br />
-          <span class="tag">Java</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">Python</span>
-        </div>
+      .project-desc {
+        font-size: 0.9rem;
+        color: var(--muted);
+        margin-top: 4px;
+      }
 
-        <div>
-          <strong>Frontend</strong><br />
-          <span class="tag">React</span>
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">Tailwind</span>
-          <span class="tag">Material UI</span>
-        </div>
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+        }
+        .actions {
+          display: none;
+        }
+        #cv {
+          box-shadow: none;
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
 
-        <div>
-          <strong>Backend</strong><br />
-          <span class="tag">Node.js</span>
-          <span class="tag">NestJS</span>
-          <span class="tag">Spring Boot (académico)</span>
-        </div>
-
-        <div>
-          <strong>Bases de Datos</strong><br />
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">MongoDB</span>
-          <span class="tag">SQL Server</span>
-        </div>
-
-        <div>
-          <strong>Herramientas</strong><br />
-          <span class="tag">Git</span>
-          <span class="tag">GitHub</span>
-          <span class="tag">Prisma</span>
-          <span class="tag">Vite</span>
-          <span class="tag">Bootstrap</span>
-        </div>
+  <body>
+    <div class="container">
+      <div class="actions">
+        <button onclick="downloadPDF()">Descargar CV en PDF</button>
       </div>
 
-      <h3>Experiencia</h3>
-      <p><strong>Soporte Técnico PC – Independiente</strong></p>
-      <ul>
-        <li>Diagnóstico, reparación y mantenimiento de equipos informáticos.</li>
-        <li>Instalación de sistemas operativos y software.</li>
-        <li>Asesoramiento técnico personalizado.</li>
-      </ul>
+      <section id="cv">
+        <header>
+          <h1>Manuel Namuncurá</h1>
+          <h2>Analista en Sistemas | Desarrollador Trainee / Junior</h2>
+          <div class="info">
+            <span>📍 Villa María, Córdoba</span>
+            <span
+              >📧
+              <a href="mailto:manu.namun94@gmail.com"
+                >manu.namun94@gmail.com</a
+              ></span
+            >
+            <span
+              >🔗
+              <a
+                href="https://www.linkedin.com/in/manuel-namuncurá-a9591b21b"
+                target="_blank"
+                >LinkedIn</a
+              ></span
+            >
+            <span
+              >💻
+              <a href="https://github.com/manuNamuncura" target="_blank"
+                >GitHub</a
+              ></span
+            >
+          </div>
+        </header>
 
-      <h3>Educación</h3>
-      <p>
-        <strong>Ingeniería en Sistemas de Información</strong><br />
-        UTN – FR Villa María (2016 – Actualidad)<br />
-        Estudiante de 4.º año – 8 materias pendientes
-      </p>
+        <header>
+          <h3>Perfil Profesional</h3>
+          <p>
+            Analista de Sistemas y estudiante avanzado de Ingeniería en Sistemas
+            de Información (UTN). Enfocado en el desarrollo de software moderno. 
+            Apasionado por resolver problemas técnicos y el aprendizaje continuo 
+            de nuevas tecnologías.
+          </p>
+        </header>
 
-      <p>
-        <strong>Analista en Sistemas de Información</strong><br />
-        UTN – FR Villa María
-      </p>
+        <header>
+          <h3>Habilidades Técnicas</h3>
+          <div class="grid">
+            <div>
+              <strong>Lenguajes</strong><br />
+              <span class="tag">Java</span> <span class="tag">JavaScript</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Python</span>
+            </div>
+            <div>
+              <strong>Frontend</strong><br />
+              <span class="tag">React</span>
+              <span class="tag">HTML5/CSS3</span>
+              <span class="tag">Tailwind</span> <span class="tag">MUI</span>
+            </div>
+            <div>
+              <strong>Backend</strong><br />
+              <span class="tag">Node.js</span> <span class="tag">NestJS</span>
+              <span class="tag">Spring Boot</span>
+            </div>
+            <div>
+              <strong>Bases de Datos</strong><br />
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MySQL</span> <span class="tag">MongoDB</span>
+            </div>
+          </div>
+        </header>
 
-      <h3>Certificaciones</h3>
-      <ul>
-        <li>Testing dinámico y estático aplicado a metodologías ágiles</li>
-        <li>Ransomware: análisis y ciberseguridad</li>
-      </ul>
-    </section>
-  </div>
+        <header>
+          <h3>Proyectos Destacados</h3>
 
-  <script>
-    function downloadPDF() {
-      const element = document.getElementById("cv");
-      html2pdf()
-        .from(element)
-        .set({
-          filename: "Manuel_Namuncura-CV.pdf",
+          <div class="project-card">
+            <div class="project-header">
+              <strong>Gestión de Reclamos</strong>
+              <div>
+                <span class="tag">React</span><span class="tag">NestJS</span
+                ><span class="tag">MongoDB</span>
+              </div>
+            </div>
+            <p class="project-desc">
+              Aplicación para la administración y seguimiento de tickets.
+              Incluye gestión de estados de reclamo, asignación de operarios y
+              reportes.
+            </p>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <strong>Calculadora de IMC</strong>
+              <div>
+                <span class="tag">React</span><span class="tag">NestJS</span
+                ><span class="tag">PostgreSQL</span>
+              </div>
+            </div>
+            <p class="project-desc">
+              Herramienta interactiva para el cálculo de salud biométrica con
+              interfaz responsiva y validación de datos en tiempo real.
+            </p>
+          </div>
+        </header>
+
+        <header>
+          <h3>Experiencia Laboral</h3>
+          <p><strong>Soporte Técnico PC – Independiente</strong></p>
+          <ul>
+            <li>
+              Diagnóstico, reparación y optimización de hardware y software.
+            </li>
+            <li>Configuración de redes locales y mantenimiento preventivo.</li>
+          </ul>
+        </header>
+
+        <header>
+          <h3>Educación e Idiomas</h3>
+          <p>
+            <strong>Ingeniería en Sistemas de Información</strong> | UTN – FR
+            Villa María<br />
+            <small
+              >2016 – Actualidad (Estudiante de 4.º año – 8 materias
+              pendientes)</small
+            >
+          </p>
+          <p>
+            <strong>Analista en Sistemas de Información</strong> | UTN – FR
+            Villa María
+          </p>
+          <p style="margin-top: 10px">
+            <strong>Idiomas:</strong> Inglés Intermedio (B1/B2) - Capacidad para
+            lectura técnica y comunicación efectiva.
+          </p>
+        </header>
+
+        <header>
+          <h3>Certificaciones</h3>
+          <ul>
+            <li>Testing dinámico y estático aplicado a metodologías ágiles.</li>
+            <li>Ransomware: análisis y ciberseguridad.</li>
+          </ul>
+        </header>
+      </section>
+    </div>
+
+    <script>
+      function downloadPDF() {
+        const element = document.getElementById("cv");
+        const opt = {
           margin: 10,
-          html2canvas: { scale: 2 }
-        })
-        .save();
-    }
-  </script>
-</body>
+          filename: "CV_Manuel_Namuncura.pdf",
+          image: { type: "jpeg", quality: 0.98 },
+          html2canvas: { scale: 2, useCORS: true },
+          jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+        };
+        html2pdf().set(opt).from(element).save();
+      }
+    </script>
+  </body>
 </html>
