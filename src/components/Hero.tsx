@@ -13,12 +13,14 @@ import {
   SiPrisma,
   SiMysql,
 } from "react-icons/si";
+import ShinyText from "./ui/ShinyText";
 
 const techLogos = [
-  { 
-    node: <SiReact />, 
-    title: "React", 
-    href: "https://react.dev" },
+  {
+    node: <SiReact />,
+    title: "React",
+    href: "https://react.dev",
+  },
   {
     node: <SiTypescript />,
     title: "TypeScript",
@@ -89,9 +91,17 @@ const Hero = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 opacity-0 animate-fade-in">
             <div className="space-y-2">
-              <p className="text-accent font-medium">Hola soy </p>
+              <p className="text-accent font-medium">
+                Hola soy
+              </p>
               <h1 className="text-5xl md:text-6xl font-bold bg-linear-to-r from-primary to-accent bg-clip-text">
-                Manuel Namuncurá
+                <ShinyText
+                  speed={3.9}
+                  delay={1.6}
+                  color="#2b1d95"
+                  spread={85}
+                  text={"Manuel Namuncurá"}
+                />
               </h1>
             </div>
             <h2 className="text-2xl md:text-3xl text-foreground/80 font-medium">

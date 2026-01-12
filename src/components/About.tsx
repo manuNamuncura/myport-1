@@ -1,5 +1,6 @@
 import { Code2, Lightbulb, Rocket } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import AnimatedContent from "./ui/AnimatedContent";
 
 const About = () => {
   const highlights = [
@@ -31,7 +32,16 @@ const About = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {highlights.map((item, index) => (
+           {highlights.map((item, index) => (
+          <AnimatedContent
+            distance={190}
+            reverse
+            duration={2.0}
+            ease="elastic.out(1, 0.3)"
+            animateOpacity={false}
+            disappearEase="elastic.in(1, 0.3)" 
+                    
+          >
             <Card
               key={index}
               className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-2 hover:border-accent/50 animate-in fade-in slide-in-from-bottom"
@@ -41,6 +51,7 @@ const About = () => {
               <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
               <p className="text-muted-foreground">{item.description}</p>
             </Card>
+          </AnimatedContent>      
           ))}
         </div>
 
